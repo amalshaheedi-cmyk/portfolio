@@ -114,8 +114,9 @@
   .pn { flex-direction: column; }
   .pn a { min-width: 0; }
 }
-.frame--inset { padding: clamp(18px, 3vw, 44px); }
-.frame--inset video, .frame--inset img { width: min(100%, 780px); margin: 0 auto; border-radius: 9px; box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
+.frame--inset { padding: clamp(14px, 2vw, 28px); container-type: inline-size; }
+.frame--inset video, .frame--inset img { width: min(100%, 960px); margin: max(0px, (100cqi - 960px) / 2) auto; border-radius: 9px; box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
 .stack--loose { gap: clamp(48px, 5.5vw, 80px); }
 .stack--loose > .shead { margin-bottom: calc(32px - clamp(48px, 5.5vw, 80px)); }
 .stack--loose .annot .notes li + li { margin-top: 10px; }
+.statement--bare, .study .statement--bare { padding: 0; background: none; border-radius: 0; margin-top: 16px; }
