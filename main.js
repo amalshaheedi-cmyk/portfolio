@@ -132,4 +132,10 @@
   });
   document.getElementById("pw-cancel").addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  const want = new URLSearchParams(location.search).get("unlock");
+  if (want && /^[\w-]+\.html$/.test(want)) {
+    history.replaceState(null, "", location.pathname);
+    if (unlocked()) location.href = want;
+    else { target = want; dlg.showModal(); input.focus(); }
+  }
 })();
