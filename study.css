@@ -1,5 +1,5 @@
 /* Shared blocks for the Salesforce, Smart Layouts and PVH case studies. Builds on case.css. */
-.study .hero__img { height: auto; border-radius: 13px; background: #fff; }
+.study .hero__img { height: auto; background: #fff; }
 .study .hero__img--contain { object-fit: contain; }
 
 /* overview: team pills without photos */
@@ -26,6 +26,7 @@
 .cards p { font-size: 16px; line-height: 1.55; color: #1c1c21; }
 .cards--plain article { min-height: 0; padding-bottom: 26px; }
 .cards--plain p { font: 700 17px/1.4 var(--sans); }
+.cards--plain.cards--tall article { min-height: 170px; padding: 28px 26px 32px; }
 .cards .num { margin-bottom: 14px; }
 
 /* quote-style statement */
@@ -58,7 +59,7 @@
 
 /* before / after */
 .ba { display: flex; flex-direction: column; gap: 14px; }
-.ba .frame { background: #0c0c0e; padding: clamp(14px, 2vw, 28px); }
+.ba .frame { background: #fff; padding: clamp(14px, 2vw, 28px); }
 .caps3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 19.6px; }
 .caps3 p { font-size: 16px; line-height: 1.55; }
 
@@ -113,3 +114,8 @@
   .pn { flex-direction: column; }
   .pn a { min-width: 0; }
 }
+.frame--inset { padding: clamp(18px, 3vw, 44px); }
+.frame--inset video, .frame--inset img { width: min(100%, 780px); margin: 0 auto; border-radius: 9px; box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
+.stack--loose { gap: clamp(48px, 5.5vw, 80px); }
+.stack--loose > .shead { margin-bottom: calc(32px - clamp(48px, 5.5vw, 80px)); }
+.stack--loose .annot .notes li + li { margin-top: 10px; }
