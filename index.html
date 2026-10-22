@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amal Shaheedi — Product Designer</title>
+  <meta name="description" content="Amal is a product designer based in NYC, currently at Adobe, optimizing content experiences for key markets around the globe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Instrument+Sans:wdth,wght@75..100,400..600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css?v=2">
+</head>
+<body class="home">
+  <a class="skip" href="#work">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#top" data-section="top" class="is-active">Product</a></li>
+      <li><a href="#experience" data-section="experience">Visual</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#contact" data-section="contact">Connect</a></li>
+    </ul>
+  </nav>
+
+  <main class="page" id="top">
+
+    <header class="hero">
+      <h1 class="reveal-hero">Hi! I’m Amal, a Product and Visual Designer based in <span class="script">New York</span></h1>
+      <p class="sub reveal-hero">Currently at Adobe, optimizing content experiences for key markets around the globe</p>
+    </header>
+
+    <section class="work" id="work" aria-label="Selected work">
+      <div class="col col--left">
+        <figure class="item" data-reveal>
+          <a class="card card--express" href="explore.html" style="--ar:504/590" aria-label="Adobe, Explore 3.0">
+            <img src="assets/express-prompt.gif" alt="Adobe Express prompt interface suggesting “A blue modern infographic” with suggested templates" width="640" height="749">
+          </a>
+          <figcaption>Adobe, Explore 3.0</figcaption>
+        </figure>
+        <figure class="item" data-reveal>
+          <a data-locked class="card" href="#experience" style="--ar:1/1" aria-label="Salesforce, Leading for success">
+            <img src="assets/card-adobe.png" alt="Spiral notebook with an illustration for Salesforce Trailhead" loading="lazy" width="1060" height="1028">
+          </a>
+          <figcaption>Salesforce, Leading for success</figcaption>
+        </figure>
+      </div>
+      <div class="col col--right">
+        <figure class="item" data-reveal>
+          <a data-locked class="card card--adobe" href="#experience" style="--ar:492/530" aria-label="Adobe, Layout templates">
+            <img src="assets/adobe-wordmark.gif" alt="Animated Adobe wordmark" width="1600" height="1200">
+          </a>
+          <figcaption>Adobe, Layout templates</figcaption>
+        </figure>
+        <figure class="item" data-reveal>
+          <a data-locked class="card" href="#experience" style="--ar:505/590" aria-label="PVH, Manager studio">
+            <img src="assets/card-brand.png" alt="PVH Manager Studio branded badges and stickers" loading="lazy" width="1094" height="1020">
+          </a>
+          <figcaption>PVH, Manager studio</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-h">
+      <div class="block" data-reveal>
+        <h2 id="about-h" class="script">About</h2>
+        <p class="body">I’m a product designer who believes great experiences start with understanding people. My work spans UX research and strategy, interface design, and visual design, and I’m at my best where all three meet. That combination lets me design products that are not only usable and well-structured, but also polished and memorable.</p>
+      </div>
+
+      <div id="experience" class="jobs">
+        <article class="job" data-reveal>
+          <p class="body date script">2025-Current</p>
+          <h2>Adobe, Product Designer, Content</h2>
+          <p class="body">Redesigned the Adobe Express Explore page with a content and AI first solution</p>
+        </article>
+        <article class="job" data-reveal>
+          <p class="body date script">2021-2025</p>
+          <h2>Mindgym, Principal Designer</h2>
+          <p class="body">Led internal campaigns and strategy for Fortune 500 companies, Salesforce, Coca Cola, Nike, etc</p>
+        </article>
+        <article class="job" data-reveal>
+          <p class="body date script">2021</p>
+          <h2>United Nations, Visual Designer</h2>
+          <p class="body">Designed engagement global campaigns for social media channels</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <h2 data-reveal>Let’s collaborate</h2>
+    <p class="links"><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> <span>|</span> <a href="mailto:amalshaheedi@gmail.com" data-copy>Email</a></p>
+  </footer>
+
+  <dialog class="pw" id="pw" aria-labelledby="pw-h">
+    <form class="pw__box" method="dialog" novalidate>
+      <span class="pw__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
+      <h2 id="pw-h">This case study is protected</h2>
+      <p>Enter the password to view it.</p>
+      <label class="pw__field"><span class="sr">Password</span><input id="pw-input" type="password" autocomplete="current-password" placeholder="Password" required></label>
+      <p class="pw__err" id="pw-err" role="alert" hidden>That password isn’t right. Try again.</p>
+      <div class="pw__actions">
+        <button type="button" class="pw__btn pw__btn--ghost" value="cancel" id="pw-cancel">Cancel</button>
+        <button type="submit" class="pw__btn" id="pw-submit">Unlock</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="main.js?v=2"></script>
+</body>
+</html>

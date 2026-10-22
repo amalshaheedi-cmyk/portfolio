@@ -1,0 +1,80 @@
+/* Home page theme: cream canvas, Instrument Serif / Instrument Sans, Cedarville Cursive accents */
+.home { --bg: #fff3ea; --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; --serif: "Instrument Serif", Georgia, serif; --script: "Cedarville Cursive", cursive; background: var(--bg); }
+.home .script { font-family: var(--script); }
+
+/* Nav */
+.home .nav { top: 68px; background: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 6px 8px; transition: background .5s var(--ease), box-shadow .5s var(--ease), backdrop-filter .5s; }
+.home .nav.is-scrolled { background: rgba(255,243,234,.78); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); box-shadow: 0 10px 30px -16px rgba(0,0,0,.3); }
+.home .nav ul { gap: 4px; }
+.home .nav a { border: 0; margin: 0; padding: 9px 16px; color: #000; font: 500 15px/1 var(--sans); letter-spacing: .02em; position: relative; }
+.home .nav a::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 1.5px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+.home .nav a:hover::after, .home .nav a.is-active::after { transform: scaleX(1); }
+.home .nav a.is-active { background: transparent; color: #000; }
+
+/* Hero */
+.home .hero { width: min(880px, 100% - 40px); text-align: center; color: #000; padding-top: 100px; padding-bottom: 60px; min-height: calc(100svh - 190px); justify-content: center; align-items: center; }
+.home .hero h1 { font: 400 clamp(36px, 5.2vw, 60px)/1.13 var(--serif); text-wrap: balance; }
+.home .hero h1 .script { font-family: var(--script); word-spacing: -.55em; }
+.home .hero .sub { margin-top: 22px; max-width: 640px; font: 400 clamp(18px, 1.9vw, 22px)/1.25 var(--sans); text-wrap: pretty; }
+
+/* Cards + captions */
+.home .work { gap: 0 clamp(16px, 3vw, 44px); align-items: start; }
+.home .col { gap: 44px; }
+.home .item { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.home .item figcaption { font: 400 16px/1.2 var(--sans); }
+.home .card { border-radius: 20px; box-shadow: none; }
+.home .card--express { border-radius: 20px; }
+.home .col--right { padding-top: 0; }
+
+/* About / jobs */
+.home .about { color: #000; max-width: 880px; margin-top: calc(160 * var(--u)); gap: 72px; }
+.home .about h2.script { font: 400 clamp(22px, 2.2vw, 26px)/1.13 var(--script); }
+.home .job h2 { font: 400 clamp(26px, 2.8vw, 34px)/1.13 var(--serif); }
+.home .body { font: 400 clamp(16px, 1.5vw, 18px)/1.4 var(--sans); }
+.home .date { font: 400 clamp(18px, 1.7vw, 20px)/1.13 var(--script); opacity: 1; }
+.home .job::before { background: #000; opacity: 1; top: -36px; }
+
+/* Contact */
+.home .contact { background: #000; margin-top: calc(200 * var(--u)); padding: 100px 20px; }
+.home .contact h2 { font: 400 clamp(40px, 5vw, 60px)/1.13 var(--serif); }
+.home .links { margin-top: 0; font: 400 16px/1 var(--sans); text-transform: uppercase; letter-spacing: .04em; }
+.home .links a { position: relative; padding: 4px 2px; }
+.home .links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+.home .links a:hover::after { transform: scaleX(1); }
+.home .links span { margin: 0 8px; opacity: .7; }
+
+@media (max-width: 760px) {
+  .home .nav a { font-size: 12px; padding: 8px 10px; }
+  .home .nav a::after { left: 10px; right: 10px; }
+  .home .col { gap: 28px; }
+  .home .work { gap: 28px; }
+}
+.home .card--adobe { background: #fff; }
+.home .card--adobe img { object-fit: contain; }
+
+/* password-protected case studies */
+.card[data-locked]::after {
+  content: ""; position: absolute; top: 16px; right: 16px; z-index: 2; width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4.5' y='10.5' width='15' height='10' rx='2.5'/%3E%3Cpath d='M8 10.5V7.5a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center / 18px no-repeat;
+  box-shadow: 0 2px 10px rgba(0,0,0,.12); backdrop-filter: blur(6px);
+}
+.is-unlocked .card[data-locked]::after { display: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.pw { border: 0; padding: 0; border-radius: 24px; width: min(420px, calc(100vw - 32px)); background: #fff; color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.35); }
+.pw::backdrop { background: rgba(0,0,0,.35); backdrop-filter: blur(4px); }
+.pw[open] { animation: pw-in .35s var(--ease); }
+@keyframes pw-in { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+.pw__box { display: flex; flex-direction: column; padding: 32px; font-family: var(--text); }
+.pw__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #f1f1f1; margin-bottom: 20px; }
+.pw h2 { margin: 0; font-size: 22px; font-weight: 600; line-height: 1.25; }
+.pw p { margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: #555; }
+.pw__field { margin-top: 20px; }
+.pw input { width: 100%; height: 48px; padding: 0 16px; border: 1px solid #d6d6d6; border-radius: 12px; font: inherit; font-size: 16px; background: #fff; }
+.pw input:focus { outline: 2px solid #5b4bff; outline-offset: 1px; border-color: transparent; }
+.pw.is-error input { border-color: #d7373f; animation: pw-shake .35s; }
+@keyframes pw-shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.pw .pw__err { color: #d7373f; font-size: 14px; margin-top: 8px; }
+.pw__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
+.pw__btn { height: 44px; padding: 0 22px; border-radius: 999px; border: 0; background: #000; color: #fff; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; }
+.pw__btn--ghost { background: #f1f1f1; color: #000; }
+.pw__btn:focus-visible { outline: 2px solid #5b4bff; outline-offset: 2px; }

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore 3.0 — Amal Shaheedi</title>
+  <meta name="description" content="Redesigning search and filtering on the Adobe Express Explore page — process, research and solution.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case.css?v=47">
+</head>
+<body class="case">
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <a class="back" href="index.html"><span aria-hidden="true">←</span> Home</a>
+
+  <nav class="snav" aria-label="Sections">
+    <a href="#overview" class="is-active">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#research">Research</a>
+    <a href="#prompt">Discovery</a>
+    <a href="#filtering">Solution</a>
+  </nav>
+
+  <div class="page" id="page">
+    <header class="sec hero">
+      <div class="hero__text">
+        <p class="script in">Explore 3.0</p>
+        <h1 class="in">Search that understands intent</h1>
+        <p class="lede in">Redesigning search &amp; filtering on the Explore page — process, research and solution</p>
+      </div>
+      <video class="hero__img in" src="assets/p1/hero-gradient.mp4" poster="assets/p1/hero-gradient.png" autoplay muted loop playsinline aria-label="Adobe Design" width="1042" height="542"></video>
+    </header>
+
+    <section class="sec overview" id="overview">
+      <div data-reveal>
+        <h3 class="h4">Overview</h3>
+        <p>Search is one of the main ways people find templates on the Adobe Express Explore page, but only about 41% of searches lead to a click, and that rate has barely moved in a year. This project finds the why and makes filters simpler and adds AI refinement, so people get from search to creating faster.</p>
+      </div>
+      <div data-reveal>
+        <h3 class="h4">My role</h3>
+        <ul><li>UX Research/Strategy</li><li>UI Design</li><li>Prototyping</li></ul>
+        <h3 class="h4 gap">Duration</h3>
+        <p>12 Weeks</p>
+      </div>
+      <div data-reveal>
+        <div class="person person--teal"><span class="av"><img src="assets/p1/av-011d2.png" alt=""><img src="assets/p1/av-b8d90.png" alt="Amal Shaheedi"></span><span><b>Amal Shaheedi</b><small>Product Design, Content</small></span></div>
+        <div class="person person--blue"><span class="av"><img src="assets/p1/av-011d2.png" alt=""><img src="assets/p1/av-c00eb.png" alt="Miguel Astorga"></span><span><b>Miguel Astorga</b><small>Product Design</small></span></div>
+        <div class="person person--teal"><span class="av"><img src="assets/p1/av-011d2.png" alt=""><img src="assets/p1/av-57964.png" alt="James Ihezue"></span><span><b>James Ihezue</b><small>Content Strategist</small></span></div>
+      </div>
+    </section>
+
+    <section class="sec problem" id="problem">
+      <header class="problem__head" data-reveal>
+        <p class="script">Problem</p>
+        <h2 class="h3">Finding the right template takes too much work</h2>
+      </header>
+      <div class="data" data-reveal>
+        <div class="data__list">
+          <h3 class="h4">From the data we know users are searching but not finding the right content</h3>
+          <ul class="arrows">
+            <li>→ 35.8% engaging with search results</li>
+            <li>→ roughly 6 in 10 searches don’t end in a click</li>
+            <li>→ only 2% of users engage with the filters</li>
+          </ul>
+        </div>
+        <figure class="chart" aria-label="Search engagement rate by month"><div class="bar" style="--i:0;--h:285.6"><span>35.3%</span><i></i><em>Sep ’25</em></div><div class="bar" style="--i:1;--h:283.9"><span>35.1%</span><i></i><em>Dec ’25</em></div><div class="bar" style="--i:2;--h:283.9"><span>35.1%</span><i></i><em>Mar ’26</em></div><div class="bar" style="--i:3;--h:298.5"><span>36.9%</span><i></i><em>Jun ’26</em></div><div class="bar is-hi" style="--i:4;--h:289.6"><span>35.8%</span><i></i><em>Sep ’26</em></div></figure>
+      </div>
+
+      <div class="audit" data-reveal>
+        <figure class="shot">
+          <figcaption class="h4">Current Explore Experience</figcaption>
+          <img class="shot__framed" src="assets/p1/audit-current-framed.png" alt="The current Adobe Express Explore page with filters, collections and template grid" width="1280" height="860">
+        </figure>
+        <ol class="notes"><li><div class="row"><span class="num">1</span><h4 class="h4">Two separate filtering systems</h4></div><p>Personalization chips on top, a sort panel on the side</p></li><li><div class="row"><span class="num">2</span><h4 class="h4">Top heavy: filters, collection cards</h4></div><p>Competing for attention within the layout</p></li><li><div class="row"><span class="num">3</span><h4 class="h4">Long complicated filtering system</h4></div><p>189 content categories. Many vague sections</p></li><li><div class="row"><span class="num">4</span><h4 class="h4">Dead ends</h4></div><p>Lack of template relevance, there’s no clear path from search&gt;create</p></li></ol>
+      </div>
+    </section>
+
+    <section class="sec research" id="research">
+      <header class="research__head" data-reveal>
+        <p class="script">Research</p>
+        <h2 class="h3">Mapping the search journey</h2>
+      </header>
+      <ol class="journey" data-reveal><li>Explore / Discover</li><li class="arr" aria-hidden="true">→</li><li><span>Search<br>Query</span></li><li class="arr" aria-hidden="true">→</li><li>Categorize</li><li class="arr" aria-hidden="true">→</li><li>Sort</li><li class="arr" aria-hidden="true">→</li><li><span>Refine<br>further</span></li><li class="arr" aria-hidden="true">→</li><li class="is-end">Create</li></ol>
+      <div class="hmw" data-reveal>
+        <h3 class="h4">How Might We (Key Considerations)</h3>
+        <div class="hmw__grid">
+          <article><h4>One</h4><p>Have a clear distinction between prompt and search. Add AI integrations that make sense move away from traditional search</p></article>
+          <article><h4>Two</h4><p>Hide filters behind a button; consolidate pill tabs and collections</p></article>
+          <article><h4>Three</h4><p>Rethink categories around intent → narrow by size or style</p></article>
+          <article><h4>Four</h4><p>Move the users to an ideal state from Search → Create</p></article>
+        </div>
+      </div>
+      <div class="decisions" data-reveal>
+        <h3 class="h4">Making Decisions</h3>
+        <p>Through reiteration and cross team collaboration, we were able to narrow down on priority changes and make decisions for the redesign</p>
+        <div class="decisions__box"><video src="assets/p1/decisions.mp4" width="1920" height="1368" autoplay muted loop playsinline preload="metadata" aria-label="Walkthrough of concept explorations and design decisions"></video></div>
+      </div>
+    </section>
+
+    <section class="sec prompt" id="prompt">
+      <header class="prompt__head" data-reveal>
+        <h2>The prompt bar sets the wrong expectation</h2>
+        <p>A search bar promises results. A prompt bar promises generation</p>
+      </header>
+      <div class="two">
+        <article class="panel" data-reveal>
+          <h3>If it opens conversational</h3>
+          <img src="assets/p1/fig-prompt-a.png" alt="Prompt bar leading into an AI assistant editor" loading="lazy" width="450" height="190">
+          <dl class="why">
+            <dt>Jarring Jump</dt><dd>Searching leaves Explore</dd>
+            <dd><b class="red">Why it matters</b> People typing to find templates land somewhere new. Users shouldn’t be surprised where they land</dd>
+            <dd><b class="red">Impact</b> People who came to browse lose their place. Confused users go back and start over</dd>
+          </dl>
+        </article>
+        <article class="panel" data-reveal>
+          <h3>If it opens a results page</h3>
+          <img src="assets/p1/fig-prompt-b.png" alt="Prompt bar leading into a page of existing templates" loading="lazy" width="460" height="190">
+          <dl class="why">
+            <dt>Expectation mismatch</dt><dd>The bar promises generation, the page shows existing templates</dd>
+            <dd><b class="red">Why it matters</b> People read a prompt bar as the first step to creation, so existing templates look like AI output</dd>
+            <dd><b class="red">Impact</b> People second-guess what they’re seeing, then rephrase or search again instead of creating</dd>
+          </dl>
+        </article>
+      </div>
+      <div class="cats" data-reveal>
+        <div class="cats__intro">
+          <h3 class="h4">Synthesizing relevant content</h3>
+          <p class="stat">189 categories</p>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <h3 class="script">Tier #1</h3>
+            <p class="sub">Formats most searched<br>to least</p>
+            <ol class="rank"><li><span>Presentations</span></li><li><span>Logo</span></li><li><span>Social Media<small>Instagram, Linkedin, Tiktok, Youtube, Facebook, etc</small></span></li><li><span>Poster/Flyer</span></li><li><span>Resume</span></li><li><span>Business Card</span></li><li><span>Invitation</span></li><li><span>Infographic</span></li><li><span>Video</span></li></ol>
+          </div>
+          <div class="tier tier--b">
+            <h3 class="script">Tier #2</h3>
+            <ol class="rank"><li><span>Card</span></li><li><span>Menu</span></li><li><span>Post Card</span></li><li><span>Certificate</span></li><li><span>Invoice</span></li><li><span>Zoom/Teams Background</span></li><li><span>Proposal</span></li><li><span>Merch<small>Mug, T Shirt, Tote bags</small></span></li><li><span>Album cover</span></li><li><span>Ticket</span></li><li><span>Email header</span></li></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec filtering" id="filtering">
+      <header class="fhead" data-reveal>
+        <p class="script">Filtering reimagined</p>
+        <h2 class="h3">AI first search filtering</h2>
+      </header>
+      <div class="ftop" data-reveal>
+        <div class="ftop__card"><img class="ftop__gif" src="assets/p1/keyword-prompt@2x.gif" alt="Animation: typing “dark grungy halloween social post black” while AI suggests keyword chips; clicking “More Spooky” adds it to the prompt" loading="lazy" width="900" height="280"></div>
+        <ul class="points">
+          <li><h4>Query with keyword tokens</h4><p>Nudging users on how to search</p></li>
+          <li><h4>Keywords help act as a prefilter</h4><p>Further filtering becomes optional</p></li>
+          <li><h4>Specifying intent</h4><p>Moving users from a search mindset to create</p></li>
+        </ul>
+      </div>
+      <div class="fmid" data-reveal>
+        <h3 class="h4">But still how can we keep it content first?</h3>
+        <div class="fcard">
+          <img class="fcard__gif" src="assets/p1/content-filter-expanded@2x.gif" alt="Animated demo: opening the All Content filter and typing “Instagram” to narrow it to Reels, Portrait Posts, Square Posts and Story, then opening the Style, Color, Global and Sort filters in turn" width="760" height="500" loading="lazy">
+        </div>
+      </div>
+      <div class="fbot" data-reveal>
+        <div><h4 class="h4">Simple content customization filtering</h4><p>From research we found users want to customize their content by Style, Color</p></div>
+        <div><h4 class="h4">More Filters</h4><p>Moving Price, Gen AI into more filtering and not on the surface</p></div>
+        <div><h4 class="h4">Specifying content</h4><p>All Content and Language filters to increase content relevance</p></div>
+      </div>
+    </section>
+
+    <section class="sec solution" id="solution">
+      <div class="feat feat--a">
+        <div class="feat__text" data-reveal>
+          <p class="script">Solution</p>
+          <h2 class="h3 h3--ink">Explore 3.0</h2>
+          <ol class="items"><li><div class="row"><span class="num">1</span><h4 class="h4">Prompt style search</h4></div><p>A hero bar that guides users to search</p></li><li><div class="row"><span class="num">2</span><h4 class="h4">No filtering</h4></div><p>Introducing filtering once user searches so it’s intent specific</p></li><li><div class="row"><span class="num">3</span><h4 class="h4">Inspired by your designs</h4></div><p>Personalized templates based on past work and searches</p></li><li><div class="row"><span class="num">4</span><h4 class="h4">AI recipes</h4></div><p>Feature GEN AI tools that can lead them from search&gt;generate</p></li></ol>
+        </div>
+        <img class="mock mock--gif" src="assets/p1/explore-prompting@2x.gif" alt="Typing a prompt, adding keyword chips and loading results on the new Explore page" loading="lazy" width="1280" height="915" data-reveal>
+      </div>
+      <div class="feat feat--b">
+        <img class="mock mock--gif" src="assets/p1/explore-filtering@2x.gif" alt="Opening the color filter, selecting red and the templates updating to red" loading="lazy" width="1280" height="915" data-reveal>
+        <div class="feat__text" data-reveal>
+          <ol class="items"><li><div class="row"><span class="num">1</span><h4 class="h4">Unified filters</h4></div><p>Filter by content, style, color and more</p></li><li><div class="row"><span class="num">2</span><h4 class="h4">Active state</h4></div><p>Applied filters turn dark, so current state is visible</p></li><li><div class="row"><span class="num">3</span><h4 class="h4">Suggested row</h4></div><p>Best matches across format, intent specific</p></li><li><div class="row"><span class="num">4</span><h4 class="h4">Generate inline</h4></div><p>Feature GEN AI tools that can lead them from search&gt;generate</p></li></ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec impact" id="impact">
+      <header class="impact__head" data-reveal>
+        <h2>Measuring success and continued impact</h2>
+        <p class="h4">Over the next course of 6 months, we monitor</p>
+      </header>
+      <div class="impact__cols" data-reveal>
+        <div><p>→ A/B test unified filters vs the current layout</p><p>→ AI-first prompt testing</p></div>
+        <div><p>→ Search to click conversion, baseline 41%</p><p>→ Search abandonment rate</p><p>→ GEN AI usage from search</p></div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="foot" id="contact">
+      <h2 data-reveal>Let’s collaborate</h2>
+      <p><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><span>|</span><a href="mailto:amalshaheedi@gmail.com" data-copy>Email</a></p>
+  </footer>
+
+  <script src="case.js?v=3"></script>
+  <script>
+    const vids = document.querySelectorAll("video[autoplay]");
+    const playAll = () => vids.forEach(v => { v.muted = true; v.play().catch(() => {}); });
+    playAll();
+    ["pointerdown", "keydown", "scroll", "touchstart"].forEach(e => addEventListener(e, playAll, { once: true, passive: true }));
+  </script>
+</body>
+</html>
