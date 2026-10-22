@@ -14,7 +14,7 @@
 /* Hero */
 .home .hero { width: min(880px, 100% - 40px); text-align: center; color: #000; padding-top: 100px; padding-bottom: 60px; min-height: calc(100svh - 190px); justify-content: center; align-items: center; }
 .home .hero h1 { font: 400 clamp(36px, 5.2vw, 60px)/1.13 var(--serif); text-wrap: balance; }
-.home .hero h1 .script { font-family: var(--script); word-spacing: -.55em; }
+.home .hero h1 .script { font-family: var(--script); word-spacing: -.4em; }
 .home .hero .sub { margin-top: 22px; max-width: 640px; font: 400 clamp(18px, 1.9vw, 22px)/1.25 var(--sans); text-wrap: pretty; }
 
 /* Cards + captions */
