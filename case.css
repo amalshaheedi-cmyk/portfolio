@@ -119,7 +119,7 @@ body.case { margin: 0; background: #fff3ec; color: #111; font: 400 19px/1.26 var
 .why dt { color: #eb0f00; font-weight: 700; }
 .why dd { margin: 0 0 10px; color: #1a1a1a; }
 .why dt, .why dd { font-size: 16px; line-height: 1.55; }
-.cats { display: flex; gap: 117px; align-items: flex-start; margin-bottom: 30px; }
+.cats { display: flex; gap: 117px; align-items: flex-start; margin-bottom: 100px; }
 .cats__intro { flex: none; }
 .cats__intro .h4 { white-space: nowrap; font-size: clamp(21px, 1.67vw, 24px); }
 .cats__intro .stat { font: 400 clamp(40px, 4.44vw, 64px)/1.453 var(--serif); color: #26233a; white-space: nowrap; }
